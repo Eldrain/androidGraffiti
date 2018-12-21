@@ -1,81 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GraffitiActivity">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/graffitiInfoCard"
+    <ScrollView
+        android:id="@+id/graffitiInfoScrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="6dp">
+        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/graffitiInfoContainer"
+        <android.support.v7.widget.CardView
+            android:id="@+id/graffitiInfoCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:orientation="vertical">
+            android:layout_margin="6dp">
 
-            <RelativeLayout
-                android:id="@+id/graffitiInfoImageContainer"
+            <LinearLayout
+                android:id="@+id/graffitiInfoContainer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <ImageView
-                    android:id="@+id/graffitiInfoImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/black"
-                    android:visibility="gone" />
+                <RelativeLayout
+                    android:id="@+id/graffitiInfoImageContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--<ImageView
+                        android:id="@+id/graffitiInfoImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/black"
+                        android:visibility="gone" />-->
+
+                    <TextView
+                        android:id="@+id/graffitiInfoImageNoPhoto"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/darker_gray"
+                        android:gravity="center"
+                        android:text="@string/no_photo"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
 
                 <TextView
-                    android:id="@+id/graffitiInfoImageNoPhoto"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:background="@android:color/darker_gray"
-                    android:textColor="@android:color/white"
-                    android:text="@string/no_photo"/>
-            </RelativeLayout>
+                    android:id="@+id/graffitiInfoName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="Label"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/graffitiInfoName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:textAlignment="center"
-                android:text="Label"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/graffitiInfoAuthor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="Author: "
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/graffitiInfoAuthor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:text="Author: "
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/graffitiInfoAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:text="Address"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/graffitiInfoAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="2dp"
-                android:text="Address"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/graffitiInfoDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:text="Description"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/graffitiInfoDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="2dp"
-                android:text="Description"
-                android:textSize="16sp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </ScrollView>
 
 </LinearLayout>

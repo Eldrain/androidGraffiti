@@ -166,7 +166,8 @@ public class ArtWork {
         String address = NOT_SPECIFIED;
 
         if(getLocation() != null
-                && getLocation().getAddress() != null) {
+                && getLocation().getAddress() != null
+                && !getLocation().getAddress().equals("")) {
             address = getLocation().getAddress();
         }
 
