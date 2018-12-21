@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/graffitiItemCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp">
+
+        <RelativeLayout
+            android:id="@+id/graffitiItemContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:id="@+id/graffitiItemImageContainer"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:id="@+id/graffitiItemImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/graffitiItemImageNoPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@android:color/darker_gray"
+                    android:textColor="@android:color/white"
+                    android:text="@string/no_photo"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/graffitiItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/graffitiItemImageContainer"
+                android:paddingLeft="10dp"
+                android:text="Label"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/graffitiItemAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/graffitiItemName"
+                android:layout_toEndOf="@id/graffitiItemImageContainer"
+                android:paddingLeft="10dp"
+                android:text="Author: "
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

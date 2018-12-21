@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GraffitiTask</string>
+    <string name="author_prefix">Автор: </string>
+    <string name="address_prefix">Адрес: </string>
+    <string name="description_prefix">Описание: </string>
+    <string name="no_photo">Нет фото</string>
+</resources>
